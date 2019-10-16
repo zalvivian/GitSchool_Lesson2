@@ -99,7 +99,7 @@ label define walls_list 11 no_walls 12 cane_palm 13 dirt 21 bamboo_mud 22 stone_
 encode walls, gen(wallsv2) lab(walls_list)
 
 *Language 
-capture label define language_list 1 english 2 hausa 3 igbo 4 yoruba 5 pidgin 96 other
+capture label define language_list 1 english 2 hindi 96 other
 encode survey_language, gen(survey_languagev2) lab(language_list)
 label var survey_languagev2 "Language of household interview"
 
