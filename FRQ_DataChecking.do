@@ -297,6 +297,7 @@ label var	start				"Start time"
 label var	end					"End time"
 
 label var emergency_12mo_yn 			"Used EC in the last 12 months"
+label var condom_12mo_yn				"Used condom in the last 12 months"
 
 label var FQsurvey_language "Language in which female survey was conducted"
 
