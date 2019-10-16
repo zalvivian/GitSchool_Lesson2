@@ -160,26 +160,6 @@ capture label var sanitation_pit_with_slab_check  	"Latrine has cement slab"
 capture label var sanitation_where					"Location of toilet facility"
 drop the_sanitation
 
-destring sanitation_empty_value, replace
-label define dwmy_list 1 days 2 weeks 3 months 4 years -88 "-88" -99 "-99"
-
-label define sanitation_empty_list 1 months 2 years -77 "-77" -88 "-88" -99 "-99"
-encode sanitation_empty_units, gen(sanitation_empty_unitsv2) lab(sanitation_empty_list)
-
-label var sanitation_empty_units			"Days, weeks, months, or years since toilet facility was emptied"
-label var sanitation_empty_value			"Number of days, weeks, months, or years since toilet facility was emptied"
-
-label var sanitation_empty_who 				"Last person to empty toilet facility"
-label var sanitation_empty_where			"Last place toilet facilities were emptied to"
-capture label var sanitation_empty_where_other		"Other emptied location specified"
-
-label define sanitation_who 1 neighbors 2 provider 3 other -88 "-88" -99 "-99"
-encode sanitation_empty_who, gen(sanitation_empty_whov2) lab(sanitation_who)
-
-label define sanitation_where 1 covered_hold 2 open_water 3 open_ground ///
-	4 taken_facility 5 taken_dnk 6 other -88 "-88" -99 "-99"
-encode sanitation_empty_where, gen(sanitation_empty_wherev2) lab(sanitation_where)
-
 label var sanitation_frequency_cc 			"How often use toilet facility"
 label var shared_san 						"Share toilet facility with other households/public"
 label var shared_san_hh						"Number of HH that share toilet facility"
