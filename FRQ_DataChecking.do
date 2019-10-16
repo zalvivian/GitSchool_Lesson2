@@ -358,7 +358,7 @@ foreach var of varlist your_name_check system_date_check location_con name_check
 	fp_side_effects_instructions fp_told_other_methods fp_obtain_desired return_to_provider ///
 	refer_to_relative visited_by_health_worker visited_a_facility facility_fp_discussion ///
 	fp_ad_radio fp_ad_tv fp_ad_magazine fp_ad_call fp_ever_user penultimate_method_yn pp_method_yn ///
-	partner_know emergency_12mo_yn {
+	partner_know emergency_12mo_yn condom_12mo_yn {
 	
 	encode `var', gen(`var'v2) lab(yes_no_dnk_nr_list)
 }
@@ -421,11 +421,6 @@ encode pp_method_units, gen(pp_method_unitsv2) lab(dwmy_future_list)
 
 label define FRS_result_list 1 completed 2 not_at_home 3 postponed 4 refused 5 partly_completed 6 incapacitated
 	encode FRS_result, gen(FRS_resultv2) lab(FRS_result_list)
-
-
-*Participated in previous survey
-capture label var	previous_PMA		"Previously participated in PMA 2020 survey?"
-capture encode previous_PMA, gen(previous_PMAv2) lab(yes_no_dnk_nr_list)
 
 
 /*Additional questions added in July 2016 to core*/
