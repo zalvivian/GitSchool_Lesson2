@@ -220,8 +220,7 @@ order `var'v2, after(`var'QZ)
 rename *v2 *
 drop *QZ
 
-//Kenya R6
-capture label var hh_location_ladder	"Location of house on wealth ladder: 1 = poorest, 10 = wealthiest"
+
 
 ***************************************************************************************************
 ********************************* COUNTRY SPECIFIC WEIGHT GENERATION *********************************
