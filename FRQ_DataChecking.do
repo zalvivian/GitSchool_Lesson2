@@ -532,6 +532,7 @@ gen IUD=0 if FRS_result==1
 gen injectables3=0 if FRS_result==1
 gen injectables1=0 if FRS_result==1
 gen injectables=0 if FRS_result==1
+gen injectables_im=0 if FRS_result==1
 gen injectables_sc=0 if FRS_result==1
 gen implant=0 if FRS_result==1
 gen pill=0 if FRS_result==1
@@ -557,6 +558,7 @@ replace IUD=1 if current_method_temp`y'== "IUD" & FRS_result==1
 replace injectables3=1  if current_method_temp`y'== "injectables_3mo" & FRS_result==1
 replace injectables1=1  if current_method_temp`y'== "injectables_1mo" & FRS_result==1
 replace injectables=1 if current_method_temp`y'=="injectables" & FRS_result==1
+replace injectables=1 if current_method_temp`y'=="injectables_im" & FRS_result==1
 replace injectables=1 if current_method_temp`y'=="injectables_sc" & FRS_result==1
 replace implant=1 if current_method_temp`y'=="implants" & FRS_result==1
 replace pill=1 if current_method_temp`y'=="pill" & FRS_result==1
